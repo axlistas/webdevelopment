@@ -10,17 +10,20 @@ h3 {
     font-family: Arial, sans-serif;
     font-size: 1.4em;
 }
-p {
-    font-family: "Times New Roman", serif;
-    font-size: 1.2em;
-}
+
 .p-niveau1 {
     color: red;
+    font-family: "Times New Roman", serif;
+    font-size: 1.2em;
 }
 
 .p-niveau2 {
     color: green;
+    font-family: "Times New Roman", serif;
+    font-size: 1.2em;
 }
 .p-niveau3 {
     color: blue;
+    font-family: "Times New Roman", serif;
+    font-size: 1.2em;
 }
