@@ -1,0 +1,26 @@
+h1 {
+    font-family: Arial sans-serif;
+    font-size: 1.8em;
+}
+h2 {
+    font-family: Arial sans-serif;
+    font-size: 1.5em;
+}
+h3 {
+    font-family: Arial sans-serif;
+    font-size: 1.4em;
+}
+p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+}
+.p-niveau1 {
+    color: red;
+}
+
+.p-niveau2 {
+    color: green;
+}
+.p-niveau3 {
+    color: blue;
+}
