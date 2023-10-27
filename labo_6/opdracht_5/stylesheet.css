@@ -1,0 +1,13 @@
+a {
+    background-image: url("rune.png");
+    padding-left: 30px;
+    background-size: 30px;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+a:hover {
+    background-image: url("checked.png");
+    padding-left: 30px;
+    background-position: left center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,17 @@
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 1.1em;
+    background-color: silver;
+    color: darkblue;
+}
+h1 {
+    background-color: #EF233C;
+    font-variant: all-small-caps;
+}
+a:hover {
+    background-color: orange;
+    border: 5px solid #2B2D42;
+}
+.stippeltjesrand {
+    border: 1px dotted #2B2D42;
+}
