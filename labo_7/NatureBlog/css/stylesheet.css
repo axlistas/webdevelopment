@@ -1,0 +1,43 @@
+.hoofdboven {
+    background-image: url(../images/header.jpg);
+    background-repeat: no-repeat;
+    height: 125px;
+    background-size: cover;
+
+}
+.hoofdboven h1 {
+    color: white;
+    font-size: 50px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+body {
+    width: 95%;
+    margin: 0 auto;
+
+}
+nav {
+    background-color: #2B2D42;
+
+}
+nav a {
+    color: mediumseagreen;
+    font-weight: bold;
+    text-decoration: none;
+}
+article header {
+    font-size: 30px;
+    color: #2B2D42;
+    text-decoration: underline;
+    background-color: lightgray;
+
+}
+article {
+    background-color: lightgray;
+}
+article h1 {
+    margin-top: 5px;
+}
+.midden, .hoofdboven, nav{
+    font-family: Verdana, sans-serif;
+}

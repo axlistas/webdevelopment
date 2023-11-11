@@ -1,0 +1,26 @@
+table {
+    border: black solid;
+    border-spacing:0;
+}
+td{
+    border: 1px dotted;
+}
+td:first-child, td:last-child {
+    background-color: rgb(255, 220, 220) ;
+}
+.gray{
+    background-color: #7D7D7D !important;
+}
+th{
+    background-color: rgb(170,170,200);
+}
+.vrijedag{
+ background-color: rgb(250,120,120);
+}
+.hoofding{
+    background-color: rgb(35,37,70) !important;
+    color: rgb(200,190,240) !important;
+}
+a {
+    color: blue;
+}
