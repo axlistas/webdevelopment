@@ -1,0 +1,39 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
+</head>
+<body>
+	<div class="area">01</div>
+	<div class="area tall">02</div>
+	<div class="area">03</div>
+	<div class="area short">04</div>
+	<div class="area">05</div>
+	<div class="area tall">06</div>
+	<div class="area">07</div>
+	<div class="area short">08</div>
+	<div class="area">09</div>
+	<div class="area tall">10</div>
+	<div class="area">11</div>
+	<div class="area short">12</div>
+	<div class="area">13</div>
+	<div class="area tall">14</div>
+	<div class="area">15</div>
+	<div class="area short">16</div>
+	<div class="area">17</div>
+	<div class="area tall">18</div>
+	<div class="area">19</div>
+	<div class="area short">20</div>
+	<h2>Waarom staat de tekst in de blokken horizontaal gecentreerd?</h2>
+	<ul><li>Dit komt omdat we in de css het element "text-allign" op center hebben staan.</li></ul>
+	<h2>Waarom heeft property vertical-align:center geen effect?</h2>
+	<p>Dit werkt niet omdat we geen property width hebben die hier op inspeelt.</p>
+	<h2>Wat doet vertical allign middle?</h2>
+	<p>vertical allign middle zorgt er voor dat de middenlijn van alle blokken doorgetrokken wordt, we zien dat de blokken mooi naast elkaar staan en dat er telkens even veel spatie onder de midden lijn als boven is voor elke blok.</p>
+	<h2>Hoe centreren we dan wel de tekst verticaal in een element?</h2>
+	<p>Als we de line-height van de tekst gelijk stellen aan de height van het element zelf dan positioneert de tekst zich mooi in het midden.</p>
+	<h2>Welke truc wordt vaak gebruikt om meerdere regels verticaal te centreren? </h2>
+	<p>Vaak maken ze gebruik van het css element display: table-cell. Deze techniek werkt goed voor het centreren van meerdere regels tekst omdat de tabel-celbenadering automatisch de hoogte van de container aanpast aan de inhoud, waardoor het verticaal centreren van de inhoud wordt vergemakkelijkt.</p>
+	<h2>Waarom krijgt de regel voor class 'tall' voorrang?</h2>
+	<p>De class tall komt later voor in het css document, deze wordt dus als laatste geinisialiseerd van beiden en gaat dus de andere overschrijven.</p>
+</body>
+</html>
