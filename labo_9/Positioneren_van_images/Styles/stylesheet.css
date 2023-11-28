@@ -1,0 +1,27 @@
+p img
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+article
+{
+    border: black solid 1px;
+    margin: 10px 10px;
+    height: 300px;
+    padding: 0 10px;
+}
+
+body > main > article:nth-child(n) > p > img
+{
+    float:right;
+}
+body > main > article:nth-child(2n+1) > p > img
+{
+    float:left;
+}
+
+body
+{
+    font-size: 1.25em;
+}
