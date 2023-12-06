@@ -1,0 +1,96 @@
+main{;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 10px;
+}
+.block{
+    padding:20px;
+    color: white;
+    font-size: 8em;
+    font-weight:bold;
+    text-align:center;
+}
+.block.block1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: darkmagenta;
+}
+.block.block2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: darkslategray;
+}
+.block.block3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: cornflowerblue;
+}
+.block.block4{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: darkcyan;
+}
+@media screen and (min-width: 320px){
+    .block.block1{
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .block.block2{
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+@media screen and (min-width: 772px){
+    .block.block1{
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .block.block3{
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .block.block2{
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+}
+@media screen and (min-width: 992px){
+    main{;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: repeat(3, auto);
+    }
+    .block.block1{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .block.block2{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .block.block3{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .block.block4{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+}
