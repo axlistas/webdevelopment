@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Axl Istas</title>
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <link rel="stylesheet" href="styles/bootstrap-grid.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>Axl Istas - Samenvatting</h2>
+        </div>
+        <nav>
+            <div class="links">
+                <a href="#opbouw-html">Opbouw Html</a>
+                <a href="#html-elementen">Html elementen</a>
+            </div>
+        </nav>
+    </header>
+    <div id="opbouw-html">
+        <h1 class="no-magrin">2: Opbouw van HTML:</h1>
+        <article class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10  lichtgrijs opmaak">
+                    <h3>2.2.2.1 Doctype:</h3>
+                    <p>We definieëren het html document met &lt;!DOCTYPE html&gt;</p>
+                    <h3>2.2.2.2 Taal definieëren</h3>
+                    <p>&lt;html lang="nl"&gt; dient voor een betere listing op google</p>
+                    <h3>/ Vieuwport voor mediaqueries: /</h3>
+                    <p>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</p>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </article>
+    </div>
+    <div id="html-elementen">
+        <h1>3: HTML-elementen:</h1>
+        <article class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10  lichtgrijs opmaak">
+                    <h2>3) HTML-Elementen</h2>
+                        <h3>3.1.1 Case sensitive:</h3>
+                            <p>Niets is casesensitive, je mag hoofdletters, kleine letters of een mix gebruiken</p>
+                        <h3>3.1.2 Tags:</h3>
+                            <p>Het is niet verplicht om tags af te sluiten, toch doen we het liever voor een mooier overzicht</p>
+                            <p>De meest voorkomende tags die we niet afsluiten zijn de: &lt;br&gt;, &lt;hr&gt; en de &lt;img&gt;</p>
+                            <p>Voorbeelden:</p>
+                          <p>&lt;img scr="images/test.img" &gt;</p>
+                            <p>&lt;img scr="images/test.img" /&gt;</p>
+                            <p>&lt;img scr="images/test.img"&gt;&lt;/img&gt;</p>
+                         <p>&lt;p&gt; blablabla</p>
+                            <p>&lt;p&gt; blablabla&lt;/p&gt;</p>
+                        <h3>3.1.3 Waarden tussen aanhalingstekens:</h3>
+                            <p>We steken elke waarde die we mee geven tussen ""</p>
+                        <h3>3.1.4 Correcte nesting:</h3>
+                            <p>Alles moet correct genest zijn, element in element etc</p>
+                            <p>Voorbeeld:</p>
+                            <p>&lt;element1&gt; &lt;element2&gt; &lt;p&gt; Simon gaat op zijn bek &lt;/p&gt; &lt;/element2&gt; &lt;/element1&gt;</p>
+                        <h3>3.1.5 Commentaar schrijven</h3>
+                            <p>Dit doen we aan de hand van &lt;!-- Commentaar in de code --&gt;</p>
+                        <h3>3.1.6 Tekens en &amp; tags</h3>
+                            <p>Zie pagina 15 voor de lijst</p>
+                    <h2>Deprecated HTML-elementen</h2>
+                        <h3>3.2 Depricated html elementen</h3>
+                            <p>Dit zijn elementen die uit de html support worden of zijn verwijderd</p>
+                        <h3>3.3 elementen binnen de &lt;head&gt;-tag:</h3>
+                            <p>Het &lt;title&gt;&lt;/title&gt; element zorgt voor de naam in het tablat van je browser</p>
+                        <h3>3.3.2 Meta tag:</h3>
+                            <p>De meta tag is een verplicht element waarvan er minstens een parameter moet in staan, vaak gebruiken we charset="UTF-8"</p>
+                        <h3>3.3.3 Het link element</h3>
+                            <p>We gebruiken het link element om stylesheets of andere bestanden te importeren</p>
+                    <h2>Elementen binnen de body-tag</h2>
+                        <h3>3.4.1 Heading</h3>
+                            <div class="headers">
+                                <h1>h1 Test</h1>
+                                <h2>h2 Test</h2>
+                                <h3>h3 Test</h3>
+                                <h4>h4 etc...</h4>
+                            </div>
+                        <h3>3.4.2 Gestructureerde tekst</h3>
+                        <div class="center">
+                            <p>Dit is platte tekst</p>
+                            <p class="code">&lt;p&gt;Dit is platte tekst&lt;/p&gt;</p>
+                            <p><em>Dit geeft de tekst cursief weer</em></p>
+                            <p class="code">&lt;p&gt;&lt;em&gt;Dit geeft de tekst cursief weer&lt;/em&gt;&lt;/p&gt; </p>
+                            <p><strong>Dit geeft de tekst bold weer</strong></p>
+                            <p class="code">&lt;p&gt;&lt;strong&gt;Dit geeft de tekst bold weer&lt;/strong&gt;&lt;/p&gt; </p>
+                            <p><cite>Dit citeerd iets en is ook cursief</cite></p>
+                            <p class="code">&lt;p&gt;&lt;cite&gt;Dit citeerd iets en is ook cursief&lt;/cite&gt;&lt;/p&gt; </p>
+                            <p><dfn>Dit geeft een defenietie weer en elke letter heeft dezelfde grootte</dfn></p>
+                            <p class="code">&lt;p&gt;&lt;dfn&gt;Dit geeft een defenietie weer en elke letter heeft dezelfde grootte&lt;/dfn&gt;&lt;/p&gt; </p>
+                            <p><code>Geeft computer code weer</code></p>
+                            <p class="code">&lt;p&gt;&lt;code&gt;Geeft computer code weer&lt;/code&gt;&lt;/p&gt; </p>
+                            <p><samp>Dit geeft de uitvoer aan van programma's / scripts</samp></p>
+                            <p class="code">&lt;p&gt;&lt;samp&gt;Dit geeft de uitvoer aan van programma's / scripts&lt;/samp&gt;&lt;/p&gt; </p>
+                            <p><kbd>Tekst die de gebruiker dient in te voeren</kbd></p>
+                            <p class="code">&lt;p&gt;&lt;kbd&gt;Tekst die de gebruiker dient in te voeren&lt;/kbd&gt;&lt;/p&gt; </p>
+                            <p><var>Variabele of programma argument</var></p>
+                            <p class="code">&lt;p&gt;&lt;var&gt;Variabele of programma argument&lt;/var&gt;&lt;/p&gt; </p>
+                            <p><abbr title="Test">Geeft afkorting weer</abbr></p>
+                            <p class="code">&lt;p&gt;&lt;abbr&gt;Geeft afkorting weer&lt;/abbr&gt;&lt;/p&gt; </p>
+                            <p> Dit is een lijn <br/>die doorloopt</p>
+                            <p class="code">&lt;p&gt; Dit is een lijn &lt;br&gt;die doorloopt&lt;/p&gt; </p>
+                            <pre>Test    5   6   9
+                                        8   9   5</pre>
+                            <pre class="code">&lt;pre&gt;Test    5   6   9
+                                8   9   5&lt;/pre&gt; </pre>
+
+                        </div>
+                        <h3>3.4.3 Lijsten</h3>
+                        <div class="center">
+                            <h4>Genummerde lijst:</h4>
+                            <ol>
+                                <li>Een</li>
+                                <li>Twee</li>
+                                <li>...</li>
+                            </ol>
+                            <p class="code">&lt;ol&gt; &lt;li&gt; Een &lt;/li&gt; &lt;li&gt; Twee &lt;/li&gt; &lt;li&gt; ... &lt;/li&gt; &lt;/ol&gt;
+                            </p>
+                            <h4>Ongenummerde lijst:</h4>
+                            <ul>
+                                <li>Een</li>
+                                <li>Twee</li>
+                                <li>Drie</li>
+                            </ul>
+                            <p class="code">&lt;ul&gt; &lt;li&gt; Een &lt;/li&gt; &lt;li&gt; Twee &lt;/li&gt; &lt;li&gt; drie &lt;/li&gt; &lt;/ul&gt;
+                            </p>
+                            <h4>Defenitielijst</h4>
+                            <dl>
+                                <dt>Defenitie 1</dt>
+                                <dd>De defenitie</dd>
+                                <dt>Defenitie 2</dt>
+                                <dd>De defenitie</dd>
+                            </dl>
+                            <p class="code">&lt;dl&gt; &lt;dt&gt; Defenitie 1 &lt;/dt&gt; &lt;dd&gt; De defenitie &lt;/dd&gt; &lt;dt&gt; Defenitie 2 &lt;/dt&gt; &lt;dd&gt; De defenitie &lt;/dd&gt; &lt;/dl&gt;
+                            </p>
+                        </div>
+                        <h3>3.4.4 Semantische elementen</h3>
+                        <div class="center">
+                            <h4>&lt;section&gt;</h4>
+                                <p>Dit gebruiken we om gerekateerde stukken informatie te groeperen, en is te vergelijken met een div</p>
+                                <p>Voorbeeld: Een reeks nieuwsberichten, reacties op een bericht</p>
+                                <p>Alleen gebruikbaar als er een header(h1,..) element aanwezig is</p>
+                            <h4>&lt;article&gt;</h4>
+                                <p>Hierin plaatsen we een stuk informatie dat onafhankelijk is van de rest, we zouden het kunnen plaatsen op een andere site zonder context</p>
+                            <h4>&lt;aside&gt;</h4>
+                                <p>Vaak gebruiken we dit om achtergrond informatie ge geven over een bepaald onderwerp, het kan perfect apart bekeken worden los van de rest vd pagina</p>
+                                <p>Hier plaatsen we vaak sidebars of marges</p>
+                            <h4>&lt;hgroup&gt;</h4>
+                                <p>Een groepering van header elementen die bij elkaar horen</p>
+                            <h4>&lt;header&gt;</h4>
+                                <p>Bevat vaak een baner, logo's en een zoekformuleer.</p>
+                                <p>Maar we kunnen dit ook gebruiken om een hoofding binnen in een artikel te definieeren.</p>
+                                <p>Dit kan bevatten: figure tag; h1,h2 ect elementen; nav element; p element</p>
+                            <h4>&lt;footer&gt;</h4>
+                                <p>Dit is op veel pagina's onderaan te vinden, contact info, copyright rechten etc..</p>
+                            <h4>&lt;nav&gt;</h4>
+                                <p>Dit gebruiken we om een navigatie menu weer te geven, belangrijke links naar een andere pagina / site</p>
+                            <h4>&lt;time&gt;</h4>
+                                <p>Dit gebruiken we om een datum of tijd weer te geven</p>
+                        </div>
+                        <h3>3.6 Tabellen</h3>
+                            <div class="center tabel">
+                                <table>
+                                    <caption>Een uitgebreide voorbeeld-tabel</caption>
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"> Heading <br/> rij 1 <br/> kolom 1 en 2</th>
+                                            <th>Heading <br/>rij1<br/>kolom3</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Heading <br/> rij2 <br/> Kolom1</td>
+                                            <td>Heading <br/> rij2 <br/> Kolom2</td>
+                                            <td>Heading <br/> rij2 <br/> Kolom3</td>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <td>Footer <br/> Kolom1</td>
+                                            <td>Footer <br/> Kolom2</td>
+                                            <td>Footer <br/> Kolom3</td>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>Body <br/> Rij 1 <br/>Kolom1</td>
+                                            <td>Body <br/> Rij 1 <br/>Kolom2</td>
+                                            <td rowspan="2">Body <br/> Rij 1 en 2 <br/>Kolom3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Body <br/> Rij 2 <br/>Kolom1</td>
+                                            <td>Body <br/> Rij 2 <br/>Kolom2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>Voor de uitleg, zie pagina 45</p>
+                        <h3>3.7 Hyperlinks en anchors</h3>
+                            <p>We maken gebruik van een &lt;a&gt; tag om links te leggen naar andere adressen (mail/web) of een inline page adres (anchor)</p>
+                            <p>Om naar een andere link te gaan gebruiken we:</p>
+                            <p class="code">&lt;a href"url"&gt;tekst"&lt;/a&gt;</p>
+                            <p>Om naar een mail te sturen gebruiken we:</p>
+                            <p class="code">&lt;a href"mailto:mail"&gt;Verstuur een email"&lt;/a&gt;</p>
+                            <p>Om te scrollen naar een bepaald punt op de pagina:</p>
+                            <p class="code">&lt;a href"#id"&gt;Scrol naar ..."&lt;/a&gt;</p>
+                        <h3>3.7.1 Tekeningen</h3>
+                            <p>Om een afbeelding in te laden gebruiken we de img tag</p>
+                            <p class="code">&lt;img scr="" alt"Geef het een naam" /&gt;</p>
+                            <p>Om een horizontale lijn toe te voegen:</p>
+                            <hr/>
+                            <p class="code">&lt;hr/&gt;</p>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </article>
+    </div>
+    <div id="html-valideren">
+        <h1>4: HTML5 valideren:</h1>
+        <article class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10  lichtgrijs opmaak">
+                    <h3>4.1 Onlinevalidatie</h3>
+                    <p>We gebruiken hiervoor W3c Markup Validation Service</p>
+                    <p class="code">https://validator.w3.org/</p>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </article>
+    </div>
+    <div id="formulieren">
+        <h1>5: Formulieren:</h1>
+        <article class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10  lichtgrijs opmaak">
+                    <h3>Algemeen</h3>
+                    <p>Dit gebruiken we om informatie van de gebruiker te verkrijgen en dit kunnen we later gebruiken in php etc</p>
+                    <p class="code">&lt;form action="actie" method="post/get"&gt; formulierobjecten &lt;/form&gt;</p>
+                    <h3>Voor alle soorten zie p50-58</h3>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </article>
+    </div>
+    <footer>
+        <p>Copyright &copy; Axl Istas</p>
+    </footer>
+</body>
+</html>

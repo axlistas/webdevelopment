@@ -1,0 +1,81 @@
+
+header .logo h2{
+    color: white;
+    padding: 10px;
+}
+header nav .links{
+    display: flex;
+}
+header .links a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    padding-right: 20px;
+}
+body {
+    margin:0;
+    padding:0;
+    }
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #444444;
+    height: 50px;
+}
+h1{
+    background-color: #8C8C8C;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+    margin-bottom: 15px;
+}
+.lichtgrijs{
+    background-color: #A3A3A3;
+}
+h3{
+    text-align: center;
+    margin-top: 10px;
+    background-color: #666666;
+    color: white;
+}
+p{
+    text-align: center;
+}
+.opmaak{
+    border: #444444 solid thin;
+}
+.no-magrin{
+    margin-top: 0
+}
+h2 {
+    text-align: center;
+}
+.headers h1, .headers h2, .headers h3, .headers h4 {
+    text-align: center;
+    background-color: white ;
+    color: black;
+}
+.center{
+    text-align: center;
+}
+.code{
+    background-color: black;
+    color: white;
+    font-family: monospace, sans-serif;
+}
+.tabel{
+    display: flex;
+    justify-content: center;
+}
+td, th{
+    border: black solid;
+    padding: 0;
+    margin: 0;
+}
+table {
+    margin-bottom: 10px;
+    border-spacing: 0;
+}
