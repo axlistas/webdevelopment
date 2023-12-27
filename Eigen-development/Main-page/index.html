@@ -15,6 +15,8 @@
             <div class="links">
                 <a href="#opbouw-html">Opbouw Html</a>
                 <a href="#html-elementen">Html elementen</a>
+                <a href="#html-valideren">Html Valideren</a>
+                <a href="#formulieren">Formulieren</a>
             </div>
         </nav>
     </header>
@@ -251,8 +253,191 @@
             </div>
         </article>
     </div>
+    <div id="css-inleiding">
+        <h1>1: CSS-inleiding:</h1>
+        <article class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10  lichtgrijs opmaak">
+                    <h3>1.3.4 Vieuwport voor mediaqueries:</h3>
+                    <p class="code">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</p>
+                    <h3>1.4 Het document object model</h3>
+                    <div class="center">
+                        <p>Dit is een functie binnen in je browser console die een hiërarchische structuur van een HTML pagina aantoont</p>
+                        <img src="https://www.webstepbook.com/supplements/slides/images/dom_tree.gif" alt="dom-tree-example">
+                        <p>- De li elementen zijn de children van het ul element</p>
+                        <p>- Het ul element is de parent van de li elementen</p>
+                        <p>- Het body element is de ancestor van het h1 element, het p element, het ul element en de li elementen</p>
+                        <p>- p, h1, ul , li en body zijn descendants van het html element</p>
+                        <p>- De li elementen zijn siblings</p>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </article>
+    </div>
+    <div id="selectors">
+        <h1>2: Selectors:</h1>
+        <article class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10  lichtgrijs opmaak">
+                    <h2>2.2 Element selector:</h2>
+                        <h3>2.2.1 Enkelvoudige-selector</h3>
+                            <p>We selecteren h1 en passen hier dingen op toe</p>
+                            <p class="code-css">h1 {color: red; background-color: orange;</p>
+                        <h3>2.2.2 Meervoudige-selector</h3>
+                            <p>We selecteren hier h2 en li en passen hier dingen op toe</p>
+                            <p class="code-css"> h2, li {font-size:80%; color:white;}</p>
+                        <h3>2.2.3 Descendent-selector</h3>
+                            <p>Alle em elementen zullen zwart zijn behalve de em elementen die als parent p hebben</p>
+                            <p>(Wordt toegepast op een element dat afstamt van een voorgaand element)</p>
+                            <p class="code-css"> p em {color:white;}</p>
+                        <h3>2.2.4 Child-selector</h3>
+                            <p>Deze stijl wordt alleen toegepast als het element direct afstamt van de parent</p>
+                            <p>Hier gaat em rood kleuren als het direct afstamt van p, dus niet als er bijvoorbeeld een bold tag tussen staat</p>
+                            <p class="code-css">p > em {color:red;}</p>
+                        <h3>Adjencent sibling selector</h3>
+                            <p>Een h2 die onmiddelijk na een h1 komt in de dom tree van de pagina zal 5mm minder boven-marge hebben dan een gewone h2</p>
+                            <p class="code-css">h1 + h2 {margin-top:-5mm;}</p>
+                        <h2>2.3 Class en id selector</h2>
+                            <p>- Een class selector mag een onbepaald aantal keer voorkomen in een document</p>
+                            <p>- Een id mag maar 1 keer voorkomen</p>
+                        <h3>Classes</h3>
+                            <p>Alle elementen die de class bevatten zullen de stijldeclaratie hebben</p>
+                            <p>html:</p>
+                            <p class="code">&lt;element class="class-naam"&gt;</p>
+                            <p>css:</p>
+                            <p class="code-css">.class-naam {stijldeclaratie}</p>
+                            <p>Alle p elementen die de klasse voorbeeld bevatten hebben de stijldeclaratie</p>
+                            <p class="code">&lt;p class="voorbeeld"&gt; Voorbeeld &lt;/p&gt;</p>
+                            <p class="code-css">p.voorbeeld {stijldeclaratie}</p>
+                        <h3>ID's</h3>
+                            <p>Het element dat de id bevat heeft de stijldeclaratie</p>
+                            <p class="code">&lt;element id="id-naam"&gt;</p>
+                            <p class="code-css">#id-naam {stijldeclaratie}</p>
+                            <p>Het element p met id voorbeeld heeft de stijldeclaratie</p>
+                            <p class="code">&lt;p id="voorbeeld"&gt; Voorbeeld &lt;/p&gt;</p>
+                            <p class="code-css">p#voorbeeld {stijldeclaratie}</p>
+                            <p></p>
+                        <h2>2.4 Pseudo-element selectors</h2>
+                            <p>Dit kunnen we gebruiken als we niet op alles van een element iets willen toepassen maar bv op elke eerstel letter van een zin</p>
+                            <p class="code-css">element::pseudo-element{declaratie}</p>
+                            <ul>
+                                <li>::first-line = De eerste regel van een tekst apart opmaken</li>
+                                <li>::first-letter = Hetzelfde als firstline maar de eerste letter</li>
+                                <li>::before / ::after = Met deze twee elementen, kunnen we dingen toevoegen voor of na de tekst, bv een afbeelding</li>
+                                <li>::selection = Als de gebruiker in zijn browser iets selecteerd, dan bepalen we de opmaak hiervan</li>
+                            </ul>
+                        <h2>2.5 Pseudo-class selectors</h2>
+                            <p>Zie p21 css cursus voor de lijst</p>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </article>
+    </div>
+    <div id="overerfbare-eigenschappen">
+        <h1>3: Overerfbare eigenschappen(inheritance):</h1>
+        <article class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10  lichtgrijs opmaak">
+                    <h3>Algemeen</h3>
+                        <p>Dit zijn eigenschappen die voor een element ingesteld worden maar ook van toepassing zijn op de child-elementen</p>
+                        <p>Een voorbeeld hiervan zijn color, font en background-color</p>
+                    <h3>Standaard waarden en default stylesheet</h3>
+                        <p>Er zijn vaak al vooraf gedefinieerde waarden die worden overschreven door de auteur vanaf dat ze iets meegeven in de stylesheet</p>
+                        <p>Een voorbeeld hiervan zijn fonts, margins en padding</p>
+                    <h3>3.4.1 Stijlregels op één plaats</h3>
+                        <p class="code-css">div{color:black;}</p>
+                        <p class="code-css">div{color:orange;}</p>
+                        <p class="code-css">div{color:white;}</p>
+                        <p>Als we deze regels in een css file onder elkaar zetten dan gaat de div tekstkleur wit zijn, (laatst aangehaalde wint)</p>
+                    <h3>3.4.2 Meerdere stylesheets</h3>
+                        <p>Hetzelfde principe is hier van toepassing, de laatst aangehaalde stylesheet heeft prioriteit</p>
+                        <p>De stylesheets worden zeg maar achter elkaar geplakt dus het laatste dat aangehaald wordt krijgt voorrang</p>
+                    <h3>3.4.5 Specificiteit</h3>
+                        <p>Hoe hoger het getal, hoe meer specificiteit, hoe meer het overheerst over de rest</p>
+                        <p>Zie p32 css cursus</p>
+                    <h3>3.5 !important regels</h3>
+                        <p>Als we !important bij de css plaatsen dan is dit het belangrijkst en kunnen we dit niet overschrijven</p>
+                        <p class="code-css">div {color:blue !important;}</p>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </article>
+    </div>
+    <div id="4-6">
+        <h1>4-6:Zie cursus (opmaak elementen)</h1>
+        <article class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10  lichtgrijs opmaak">
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </article>
+    </div>
+    <div id="lay-out">
+        <h1>7: Lay-out:</h1>
+        <article class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10  lichtgrijs opmaak">
+                    <h3>7.1 Normal flow</h3>
+                        <p>De pagina wordt van boven naar onder opgebouwd, links naar rechts (basis html structuur)</p>
+                    <h3>7.2 De box</h3>
+                        <p>Elk element heeft een margin, een border, een padding en zijn inhoud en beschouwen we als een rechthoek</p>
+                        <p>De dikte hiervan kunnen we instellen via css</p>
+                        <div class="center"><img src="https://blog.hubspot.com/hs-fs/hubfs/Google%20Drive%20Integration/Update%20css%20margin%20vs%20padding-2.png?width=650&name=Update%20css%20margin%20vs%20padding-2.png" alt="foto"></div>
+                    <h3>7.3 Visual formatting</h3>
+                        <p>Dit model bepaalt of de blokken naast of onder elkaar komen te staan</p>
+                        <p>Alinea's komen standaard onder elkaar te staan, net zoals een lijst, maar afbeeldingen en links worden naast elkaar geplaatst (tot de regel vol is)</p>
+                        <p>P of H1 worden dus als "block elementen" beschouwd =&gt; onder elkaar geplaatst</p>
+                        <p>- Inline = elementen die naast elkaar staan</p>
+                        <p>- Inline block = block elementen staan naast elkaar in een line</p>
+                    <h2>7.4 Positioneren</h2>
+                        <h3>7.4.1 Zwevende elementen (float)</h3>
+                            <p>Met de float eigenschap wordt het element uit de normale flow van de pagina gehaald (!!verplicht om een width mee te geven!!)</p>
+                            <p>Het gaat rond "zweven", aan de hand van de waarde:</p>
+                            <p class="code-css">float: left/right/none;</p>
+                            <p>Pas op de elementen die volgen op het floating element weten niet dat dit rond zweeft (gaat buggen)</p>
+                            <p>Als we float: clear; toepassen dan cancellen we de float op de volgende elementen</p>
+                        <h3>7.4.2 Relatief positioneren</h3>
+                            <p class="code-css">position: relative;</p>
+                            <p>De plaats van het element wordt bepaald ten opzichte van de gebruiklijke positie van het element</p>
+                            <p>De voorziene ruimte blijft dus leeg maar het element verplaatst zich wel</p>
+                            <div class="center"><img src="https://miro.medium.com/v2/resize:fit:613/1*pe9E2kzrX48Wwn_0wKklmw.png" alt="posities"></div>
+                        <h3>7.4.3 Absoluut positioneren</h3>
+                            <p class="code-css">position: absolute;</p>
+                            <p>We kunnen met coordinaten bepalen waar het staat ten opzichte van (voor-ouder) elementen dat een eigenschap hebben dat niet static is</p>
+                            <p>Als er niet zo een element aanwezig is dan wordt het berekend ten opzichte van de box van het body</p>
+                            <p>Geven we geen coordinaten mee dan is het automatisch top:0; en left:0;</p>
+                        <h2>7.5-7.6 Indelen van de pagina + css float</h2>
+                            <h3>Zie cursus p73-77</h3>
+                        <h2>7.8 CSS grid</h2>
+                            <h3>Indeling</h3>
+                                <p>We delen adhv de pagia/container op in een raster</p>
+                                <p>Hiermee kunnen we makkelijk de pagina indelen</p>
+                                <div class="center"><img src="data:image/jpeg;base64,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" alt="voorbeeld"></div>
+                                <p class="code-css">.container{display: grid;}</p>
+                                <div class="center"><img src="https://www.freecodecamp.org/news/content/images/2022/05/CSS-GRID-3.png" alt="gridraster"></div>
+                                <p>- grid-template-columns = bepalen van de kolommen</p>
+                                <p>- grid-template-rows = bepalen van de rijen</p>
+                                <p>- grid-template-areas = de vakken een naam geven om te gebruiken</p>
+                                <p class="code-css"> .container{display: grid; grid-template-colums: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; gap: .5rem}</p>
+                                <p>Een grid 3x3 met gaps van .5rem spatie tussen de cellen</p>
+                                <div class="center"><img src="https://www.w3schools.com/css/grid_lines.png" alt="lijnen"></div>
+                                <p>We bakenen alles af met lijnen en bepalen hiermee ook de positie</p>
+                                <p class="code-css">.item{grid-column-start: 1; grid-column-end: 3; grid-row-start: 1; grid-row-end: 3;}</p>
+                                <p>De eerste 2 vakjes van de 1ste rij en de 2de rij zijn nu .item</p>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </article>
+    </div>
     <footer>
-        <p>Copyright &copy; Axl Istas</p>
+        <p>Copyright &copy; Axl Istas Ga ni skidden bitches</p>
     </footer>
 </body>
 </html>

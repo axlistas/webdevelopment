@@ -79,3 +79,11 @@ table {
     margin-bottom: 10px;
     border-spacing: 0;
 }
+.code-css{
+    background-color: #2B2D42;
+    color: white;
+    font-family: monospace, sans-serif;
+}
+img {
+    height: 200px;
+}
