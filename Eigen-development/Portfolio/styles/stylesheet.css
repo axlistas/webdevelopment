@@ -143,3 +143,19 @@ a {
 .inline-block {
     display: inline-block;
 }
+a.icon-block {
+    display:inline-block;
+    width:15px;
+    margin: 8px;
+    float:left;
+    text-align:center;
+}
+footer {
+    height: 80px;
+    background-color: #444444;
+    margin-top: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
