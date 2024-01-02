@@ -119,16 +119,15 @@ body {
 }
 article {
     display: flex;
-
     flex-direction: column;
     border: black thin solid;
     border-radius: 5px;
-    height: 200px;
+    height: auto;
     width: 49%;
 }
 article h4{
     margin: 5px;
-    height: 25px;
+    height: auto;
     border-bottom: black thin solid;
 }
 article h4, article p {
