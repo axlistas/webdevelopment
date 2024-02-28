@@ -23,9 +23,9 @@ const update = () => {
 	let rood = document.getElementById("rood");
 	let groen = document.getElementById("groen");
 	let blauw = document.getElementById("blauw");
-	rood.innerHTML = "Rood: "+value;
-	groen.innerHTML = "Groen: "+value2;
-	blauw.innerHTML = "Blauw: "+value3;
+	rood.innerHTML = "Red: "+value;
+	groen.innerHTML = "Green: "+value2;
+	blauw.innerHTML = "Blue: "+value3;
 
 	colorDemos[0].style.backgroundColor=`rgb(${value}, ${value2}, ${value3})`;
 }

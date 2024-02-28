@@ -5,25 +5,27 @@
 	<script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
 	<link rel="stylesheet" href="styles/styles.css"/>
 </head> 
-<body> 
-<section>
-	<p>Color picker</p>
-	<div>
-		<p id="rood">Rood: 0-255</p>
-		<input type="range" class="slider" value="50" min="0" max="255" />
+<body>
+	<div class="row">
+		<section>
+			<div>
+				<p id="rood">Red: 50</p>
+				<input type="range" class="slider" value="50" min="0" max="255" />
+
+			</div>
+			<div>
+				<p id="groen">Green: 50</p>
+				<input type="range" class="slider" value="50" min="0" max="255" />
+			</div>
+			<div>
+				<p id="blauw">Blue: 50</p>
+				<input type="range" class="slider" value="50" min="0" max="255" />
+			</div>
+		</section>
+		<section class="blokje">
+		<p>Een gekleurd blokje:</p>
+		<div class="colorDemo" />
+		</section>
 	</div>
-	<div>
-		<p id="groen">Groen: 0-255</p>
-		<input type="range" class="slider" value="50" min="0" max="255" />
-	</div>
-	<div>
-		<p id="blauw">Blauw: 0-255</p>
-		<input type="range" class="slider" value="50" min="0" max="255" />
-	</div>
-</section>
-<section>
-<p>Een gekleurd blokje :</p>
-<div class="colorDemo" />
-</section>
 </body> 
 </html> 
