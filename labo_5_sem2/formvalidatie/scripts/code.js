@@ -121,6 +121,14 @@ const valideerEmail = () => {
 				errEmail.innerHTML = "Geen geldig email adres";
 				controle++;
 			}
+			else{
+				let index = email.indexOf("@") + 1;
+				if (email.charAt(index) === ''){
+					txtEmail.className="invalid"; // invalid class instellen
+					errEmail.innerHTML = "Geen geldig email adres";
+					controle++;
+				}
+			}
 		}
 	}
 	return controle;
