@@ -51,6 +51,8 @@ const save = () => {
 	cross.value = "X";
 	cross.addEventListener("click", () => {
 		remove(para);
+		event.stopPropagation();
+		event.preventDefault();
 	});
 	para.addEventListener("click", () => {
 		clickKader(kleuren);
