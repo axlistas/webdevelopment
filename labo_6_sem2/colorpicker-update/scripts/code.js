@@ -65,9 +65,13 @@ const remove = (para) => {
 }
 const clickKader = (kleurenMegegeven) => {
 	let kleuren = kleurenMegegeven;
+	let sliders = document.getElementsByClassName("slider");
 	let value=kleuren[0];
 	let value2=kleuren[1];
 	let value3=kleuren[2];
+	sliders[0].value = kleuren[0];
+	sliders[1].value = kleuren[1];
+	sliders[2].value = kleuren[2];
 	let colorDemos=document.getElementsByClassName("colorDemo");
 	let rood = document.getElementById("rood");
 	let groen = document.getElementById("groen");
