@@ -80,6 +80,9 @@ const handleClickCard = ($img) => {
         return;
     }
 
+    if(global.SELECTED[0] === $img){
+        return;
+    }
     global.SELECTED.push($img);
     $img.classList.add('selected');
 

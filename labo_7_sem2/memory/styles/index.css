@@ -1,6 +1,5 @@
 #grid {
     background-color: blue;
-
     display: grid;
 }
 
@@ -23,11 +22,11 @@ img{
 }
 
 .success {
-    background-color: red;
+    background-color: green;
     height: 150px;
     width: 150px;
 }
 
 div{
-    border: #2B2D42 solid thin;
+    border: #2B2D42 solid medium;
 }
