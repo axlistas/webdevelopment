@@ -1,0 +1,33 @@
+#grid {
+    background-color: blue;
+
+    display: grid;
+}
+
+img{
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+}
+
+.image {
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    background-color: black;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.selected {
+    opacity: 1;
+}
+
+.success {
+    background-color: red;
+    height: 150px;
+    width: 150px;
+}
+
+div{
+    border: #2B2D42 solid thin;
+}
