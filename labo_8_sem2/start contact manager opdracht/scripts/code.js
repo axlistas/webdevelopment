@@ -89,7 +89,7 @@ const setup = () => {
     btnNieuw.addEventListener("click", bewerkNieuwePersoon);
 
     let lstPersonen = document.getElementById("lstPersonen");
-    lstPersonen.addEventListener("click", aanklikken);
+    lstPersonen.addEventListener("change", aanklikken);
     // voeg een change listener toe aan lstPersonen. Bij het klikken op een option element in de lijst
     // moet de data van die persoon getoond worden in het formulier
 };
