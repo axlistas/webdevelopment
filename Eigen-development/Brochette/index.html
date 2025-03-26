@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiro quiz systeem</title>
+
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <script src="scripts/script.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Chiro quiz systeem</h1>
+
+    <!-- Bill Management -->
+    <div class="bill-management">
+        <input type="text" id="billName" placeholder="Nieuwe rekening naam" required>
+        <button onclick="createBill()">Maak rekening</button>
+        <select id="billSelector" onchange="selectBill()">
+            <option value="">-- Selecteer rekening --</option>
+        </select>
+        <button onclick="deleteBill()">Verwijder rekening</button>
+    </div>
+
+    <!-- Product Form -->
+    <div class="product-form">
+        <input type="text" id="productName" placeholder="Product naam" required>
+        <input type="number" id="productPrice" placeholder="Product prijs" min="0" required>
+        <label for="productCategory"></label>
+        <select id="productCategory">
+            <option value="eten">Eten</option>
+            <option value="drank">Drank</option>
+        </select>
+        <button onclick="addProduct()">Toevoegen product</button>
+    </div>
+
+    <!-- Product Buttons -->
+    <div class="product-buttons" id="productButtons"></div>
+
+    <!-- Bill Section -->
+    <div class="bill">
+        <h2>Actieve Rekening</h2>
+        <ul id="billList"></ul>
+        <p>Total: €<span id="totalAmount">0.00</span></p>
+        <button onclick="clearBill()">Clear Actieve Rekening</button>
+        <button onclick="exportAllBills()">Exporteer alles naar excel</button>
+        <button id="summaryButton" onclick="generateSummary()">Get Summary</button>
+        <div id="summaryContainer"></div>
+
+    </div>
+</div>
+
+</body>
+</html>

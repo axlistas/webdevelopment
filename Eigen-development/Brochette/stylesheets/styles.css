@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    background-image: url("../images/afbeelding_2024-08-30_174255491.png");
+    background-size: cover;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.product-form input {
+    width: calc(50% - 5px);
+    padding: 10px;
+}
+
+.product-form button {
+    width: 30%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.product-buttons button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-buttons button.delete-btn {
+    background-color: #FF5733;
+}
+
+.bill {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.bill ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.bill button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Same as before, with an additional style for bill management */
+.bill-management {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.bill-management select {
+    width: 50%;
+    padding: 10px;
+}
+
+
+/* List items in the bill */
+#billList li {
+    display: flex;                /* Use flexbox for layout */
+    justify-content: space-between; /* Spread text and button apart */
+    align-items: center;           /* Align text and button vertically */
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Remove button for bill products */
+#billList li .remove-btn {
+    background-color: #f44336;  /* Red background for remove button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    width: 200px;
+}
+
+#billList li .remove-btn:hover {
+    background-color: #d32f2f;  /* Darker red on hover */
+}
+
+#billList h4 {
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+#billList p {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+#summaryContainer {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#summaryContainer p {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#summaryContainer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#summaryContainer li {
+    margin: 5px 0;
+}

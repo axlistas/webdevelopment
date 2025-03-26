@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Login & Employee Data</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 500px; margin: auto; }
+        input, button { display: block; width: 100%; margin: 10px 0; padding: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 10px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <h3>Bearer Token:</h3>
+    <p id="token"></p>
+    <button onclick="getEmployees()" style="display:none;" id="fetchEmployees">Fetch Employees</button>
+    <table id="employeeTable" style="display:none;">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Company</th>
+            <th>Designation</th>
+            <th>Salary</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script>
+    let bearerToken = '';
+
+    function login() {
+        const email = $('#username').val(); // Use the correct field name
+        const password = $('#password').val();
+
+        const loginData = JSON.stringify({ email, password });
+
+        console.log("Sending Login Data:", loginData); // Debugging
+
+        $.ajax({
+            url: 'https://localhost:44313/api/Login',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ email, password }),
+            dataType: 'text', // Important: Treat response as raw text
+            success: function(response) {
+                console.log("Raw Token Response:", response); // Debugging
+
+                bearerToken = response.trim(); // Ensure no extra spaces
+                $('#token').text(bearerToken);
+                $('#fetchEmployees').show();
+            },
+            error: function(xhr) {
+                console.error("Login failed:", xhr.responseText);
+                alert('Login failed: ' + xhr.responseText);
+            }
+        });
+    }
+
+    function getEmployees() {
+        $.ajax({
+            url: 'https://localhost:44313/api/employee',
+            type: 'GET',
+            headers: { 'Authorization': 'Bearer ' + bearerToken },
+            success: function(data) {
+                const tbody = $('#employeeTable tbody');
+                tbody.empty();
+                data.forEach(emp => {
+                    tbody.append(`
+                            <tr>
+                                <td>${emp.employeeId}</td>
+                                <td>${emp.name}</td>
+                                <td>${emp.address}</td>
+                                <td>${emp.companyName}</td>
+                                <td>${emp.designation}</td>
+                                <td>${emp.salary}</td>
+                            </tr>
+                        `);
+                });
+                $('#employeeTable').show();
+            },
+            error: function() {
+                alert('Failed to fetch employees');
+            }
+        });
+    }
+</script>
+</body>
+</html>

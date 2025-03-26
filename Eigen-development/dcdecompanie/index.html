@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexagon Grid</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .hex-grid {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80vw;
+            justify-content: center;
+            gap: 10px;
+        }
+        .hex {
+            width: 100px;
+            height: 110px;
+            background-color: #3498db;
+            position: relative;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .hex:hover {
+            transform: scale(1.1);
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+<div class="hex-grid" id="hexGrid"></div>
+
+<script>
+    async function fetchItems() {
+        try {
+            const response = await fetch('http://localhost:3000/items');
+            const data = await response.json();
+            displayHexagons(data);
+        } catch (error) {
+            console.error('Error fetching items:', error);
+        }
+    }
+
+    function displayHexagons(items) {
+        const container = document.getElementById('hexGrid');
+        container.innerHTML = '';
+
+        items.forEach(item => {
+            const hex = document.createElement('div');
+            hex.classList.add('hex');
+            hex.textContent = item.description; // Display description instead of name
+            container.appendChild(hex);
+        });
+    }
+
+    fetchItems();
+</script>
+</body>
+</html>
